@@ -1,13 +1,12 @@
 # MultiPhysio‑HRC: Multimodal Physiological Signals Dataset for Industrial Human‑Robot Collaboration
 
-> Official companion repository for the paper **“MultiPhysio‑HRC: Multimodal Physiological Signals Dataset for industrial Human‑Robot Collaboration.”** This repo hosts code, docs, and assets to reproduce our preprocessing, feature extraction, and baseline models.
+> Official companion repository for the paper **“MultiPhysio‑HRC: Multimodal Physiological Signals Dataset for Industrial Human‑Robot Collaboration.”** This repo hosts code, docs, and assets to reproduce our preprocessing, feature extraction, and baseline models.
 
 <p align="center">
   <a href="#citation"><img alt="Cite this" src="https://img.shields.io/badge/Cite-this-blue"></a>
-  <a href="#getting-started"><img alt="Python" src="https://img.shields.io/badge/Python-3.9%2B-blue"></a>
-  <a href="#license"><img alt="License" src="https://img.shields.io/badge/License-TBD-lightgrey"></a>
-  <a href="https://tinyurl.com/MultiPhysio-HRC"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-MultiPhysio--HRC-brightgreen"></a>
-  <img alt="Status" src="https://img.shields.io/badge/Status-Active-success">
+  <a href="https://github.com/yourname/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
+  <a href="https://doi.org/XXXX"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
+  <a href="#license"><img alt="License" src="https://img.shields.io/badge/Data-CC--BY--NC%204.0-green"></a>
 </p>
 
 ---
@@ -17,25 +16,13 @@
 - **Why:** To study **stress, cognitive load, and emotion** for **human‑aware robotics**.
 - **Also:** Code to **reproduce preprocessing, feature extraction, and paper baselines**.
 
+--- 
+
+## Access
+
 **Dataset:** https://tinyurl.com/MultiPhysio-HRC  
 **Paper (PDF):** `paper/` (this repo)  
-
----
-
-## Table of Contents
-- [Overview](#overview)
-- [Highlights](#highlights)
-- [Repository Structure](#repository-structure)
-- [Getting Started](#getting-started)
-- [Dataset at a Glance](#dataset-at-a-glance)
-- [Data Schema](#data-schema)
-- [Reproducing the Paper Baselines](#reproducing-the-paper-baselines)
-- [Results (from the paper)](#results-from-the-paper)
-- [FAQ](#faq)
-- [Citation](#citation)
-- [Acknowledgments & Funding](#acknowledgments--funding)
-- [License](#license)
-- [Contact](#contact)
+**GitHub (code, preprocessing, baselines):** https://github.com/automation-robotics-machines/MultiPhysio-HRC
 
 ---
 
@@ -55,67 +42,29 @@ Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, a
 
 ---
 
-## Repository Structure
-```
-.
-├─ paper/                          # Camera‑ready or preprint PDF, figures (optional)
-├─ docs/
-│  ├─ dataset_overview.md          # Modalities, tasks, questionnaires, ethics
-│  ├─ data_schema.md               # File formats, splits, naming, timestamps
-│  └─ benchmarks.md                # Baseline setups & expected metrics
-├─ src/
-│  ├─ dataprep/                    # Loading, syncing, cleaning
-│  ├─ features/                    # Physio, EEG, voice, AUs feature extraction
-│  ├─ models/                      # Baselines (RF/AB/XGB), utils
-│  └─ eval/                        # Metrics, LOSO CV, reporting
-├─ notebooks/
-│  ├─ 01_quicklook.ipynb           # Explore a subject & modalities
-│  ├─ 02_extract_features.ipynb    # End‑to‑end feature extraction
-│  └─ 03_train_baselines.ipynb     # Reproduce results from the paper
-├─ examples/
-│  └─ minimal_pipeline.py          # Scripted end‑to‑end run
-├─ requirements.txt                # Python deps
-├─ pyproject.toml                  # (optional) for modern builds
-├─ CITATION.cff                    # Paper metadata (fill in DOI when available)
-└─ README.md                       # You are here
-```
-
-> **Tip:** If you keep raw data outside the repo, set `MULTIPHYSIO_HRC_DATA` env var to the dataset root to avoid passing paths around.
-
----
-
-## Getting Started
-### 1) Install
-```bash
-# create a clean env (conda or mamba recommended)
-conda create -n mphrc python=3.10 -y
-conda activate mphrc
-
-# install dependencies
-pip install -r requirements.txt
-```
-
-### 2) Download the dataset
-- Visit **https://tinyurl.com/MultiPhysio-HRC** and follow the instructions to obtain access and download files.
-- Keep the raw data in a folder of your choice and set:
-```bash
-export MULTIPHYSIO_HRC_DATA=/path/to/MultiPhysio-HRC
-```
-
-### 3) Sanity‑check a subject
-```bash
-jupyter lab  # then open notebooks/01_quicklook.ipynb
-```
+## Media
+<p align="center">
+  <em>Figures and demo videos will be added here.</em>
+</p>
 
 ---
 
 ## Dataset at a Glance
 **Participants**
-- Day 1: 55 subjects; Day 2: 42 subjects.
+- Day 1: 55 subjects; 
+- Day 2: 42 subjects.
 
 **Sessions & Tasks**
-- **Day 1**: Rest → Cognitive tasks (Stroop, N‑Back, Mental Arithmetic, Tower of Hanoi; ticking clock & error buzzer for pressure) → Guided Breathing → VR (height exposure).
-- **Day 2**: Rest → **Manual** battery disassembly → **Collaborative** disassembly with a voice‑controlled cobot (Fanuc CRX‑20).
+- **Day 1 – Baseline and Stress Induction**
+    - Rest
+    - Cognitive tasks (Stroop, N-back, Arithmetic, Hanoi Tower)
+    - Breathing exercise
+    - Virtual Reality task (Richie’s Plank Experience)
+
+- **Day 2 – Manual and Robot-Assisted Disassembly**
+    - Rest
+    - Manual battery disassembly
+    - Collaborative disassembly with a Fanuc CRX-20 cobot, using voice commands
 
 **Modalities**
 - **Physio**: ECG, EDA, EMG, RESP @ 256 Hz (Bitbrain Versatile Bio); EEG: 12‑channel dry EEG (Bitbrain Diadem); **Voice** recordings; **Facial AUs** (down‑sampled for efficiency).
@@ -125,82 +74,6 @@ jupyter lab  # then open notebooks/01_quicklook.ipynb
 
 **Ethics**
 - Conducted under institutional approval and with informed consent; see paper for details.
-
----
-
-## Data Schema
-> The exact file tree may differ depending on distribution. Below is a **reference schema** used by this repo’s loaders.
-
-```
-MultiPhysio-HRC/
-├─ participants.tsv                       # demographics & metadata
-├─ day1/
-│  ├─ sub-XXXX/
-│  │  ├─ physio/
-│  │  │  ├─ ecg.tsv.gz                    # 256 Hz; UTC timestamps
-│  │  │  ├─ eda.tsv.gz
-│  │  │  ├─ emg.tsv.gz
-│  │  │  └─ resp.tsv.gz
-│  │  ├─ eeg/
-│  │  │  └─ eeg.tsv.gz                    # 12 channels (AF7,Fp1,Fp2,AF8,F3,F4,P3,P4,PO7,O1,O2,PO8)
-│  │  ├─ video/
-│  │  │  └─ webcam.mp4                    # optional, when available
-│  │  ├─ audio/
-│  │  │  └─ mic.wav
-│  │  └─ labels/
-│  │     ├─ stai_y1.csv
-│  │     ├─ nasa_tlx.csv
-│  │     └─ sam.csv
-│  └─ ...
-├─ day2/
-│  └─ sub-XXXX/                           # same structure; includes manual vs HRC flags per segment
-└─ derivatives/
-   ├─ features_physio.parquet             # 60s windows; ~250 features
-   ├─ features_eeg.parquet                # 5s windows; bandpowers & entropies
-   ├─ features_voice.parquet              # MFCC stats, jitter/shimmer, etc.
-   └─ aus.parquet                         # 2 fps AU probabilities (20 AUs)
-```
-
-- **Timestamps & Sync:** All streams carry timestamps; loaders align them per task/segment.
-- **Windows:** Physio features on 60 s windows; EEG on 5 s windows; AUs at 2 fps.
-
----
-
-## Reproducing the Paper Baselines
-**End‑to‑end (script):**
-```bash
-python examples/minimal_pipeline.py \
-  --data $MULTIPHYSIO_HRC_DATA \
-  --modality physio \
-  --task regression --label STAI \
-  --cv loso --report out/report_physio_stai.json
-```
-
-**Notebooks:**
-1. `02_extract_features.ipynb` – computes features for Physio/EEG/Voice/AUs.
-2. `03_train_baselines.ipynb` – trains RF / AdaBoost / XGBoost for regression & 3‑class classification (Low/Med/High) based on per‑subject z‑like thresholds.
-
-**Models:** RandomForest, AdaBoost, XGBoost. Evaluation uses **Leave‑One‑Subject‑Out (LOSO)**. Features & labels are min–max normalized within‑subject as in the paper.
-
----
-
-## Results (from the paper)
-- **Regression (STAI‑Y1 & NASA‑TLX):** Physiological features yield the **lowest RMSE**, stronger than EEG and Voice.
-- **3‑Class Classification (Stress & Cognitive Load):** Physiological features achieve the **highest F1**, with EEG close behind for cognitive load; Voice trails Physio/EEG.
-
-> See `docs/benchmarks.md` for expected ranges and how we compute the Low/Med/High bins per subject.
-
----
-
-## FAQ
-**Q: How do I get access to raw videos or robot logs?**  
-A: See the dataset page. Some assets may require additional request/agreements.
-
-**Q: Can I use this dataset for commercial work?**  
-A: Check the **dataset page license** and this repo’s **LICENSE**. If in doubt, open an issue.
-
-**Q: Are there ready‑made splits?**  
-A: We default to **Leave‑One‑Subject‑Out**. Utility functions can generate stratified splits by task/condition.
 
 ---
 
@@ -218,8 +91,6 @@ If you use **MultiPhysio‑HRC** or this code, please cite the paper:
 }
 ```
 
-> A `CITATION.cff` file is included; please update DOI/venue once available.
-
 ---
 
 ## Acknowledgments & Funding
@@ -229,9 +100,11 @@ If you use **MultiPhysio‑HRC** or this code, please cite the paper:
 
 ---
 
-## License
-- **Code:** see [LICENSE](LICENSE). (We recommend a permissive license such as MIT/Apache‑2.0.)
-- **Dataset:** see the dataset page for the applicable data license and usage terms.
+## Ethics & License
+
+This dataset was collected under institutional ethical approval (SUPSI), with informed consent from all participants.
+- **Code:** Licensed under the [MIT License](https://opensource.org/licenses/MIT).  
+- **Dataset:** Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).  
 
 ---
 
