@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="#citation"><img alt="Cite this" src="https://img.shields.io/badge/Cite-this-blue"></a>
-  <a href="https://github.com/yourname/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
+  <a href="https://github.com/automation-robotics-machines/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
   <a href="https://doi.org/XXXX"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
   <a href="#license"><img alt="License" src="https://img.shields.io/badge/Data-CC--BY--NC%204.0-green"></a>
 </p>
@@ -20,7 +20,7 @@
 
 ## Access
 
-**Dataset:** https://tinyurl.com/MultiPhysio-HRC  
+**Dataset:** https://doi.org/10.5281/zenodo.17225571  
 **Paper (PDF):** `paper/` (this repo)  
 **GitHub (code, preprocessing, baselines):** https://github.com/automation-robotics-machines/MultiPhysio-HRC
 
