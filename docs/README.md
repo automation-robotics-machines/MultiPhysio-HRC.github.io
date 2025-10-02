@@ -5,8 +5,9 @@
 <p align="center">
   <a href="#citation"><img alt="Cite this" src="https://img.shields.io/badge/Cite-this-blue"></a>
   <a href="https://github.com/automation-robotics-machines/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
+  <a href="https://arxiv.org/abs/2510.00703"><img alt="arXiv" src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv"></a>
   <a href="https://zenodo.org/records/17225571"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
-  <a href="#license"><img alt="License" src="https://img.shields.io/badge/Data-CC--BY--NC%204.0-green"></a>
+  <a href="#license"><img alt="License" src="https://img.shields.io/badge/Data-CC--BY%204.0-green"></a>
 </p>
 
 ---
