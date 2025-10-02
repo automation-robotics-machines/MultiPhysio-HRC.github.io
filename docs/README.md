@@ -20,9 +20,9 @@
 
 ## Access
 
-**Dataset:** https://doi.org/10.5281/zenodo.17225571  
-**Paper (PDF):** `paper/` (this repo)  
-**GitHub (code, preprocessing, baselines):** https://github.com/automation-robotics-machines/MultiPhysio-HRC
+**Dataset:** [https://doi.org/10.5281/zenodo.17225571]([https://doi.org/10.5281/zenodo.17225571])
+**Paper (PDF):** [https://arxiv.org/abs/2510.00703](https://arxiv.org/abs/2510.00703)
+**GitHub (code, preprocessing, baselines):** [https://github.com/automation-robotics-machines/MultiPhysio-HRC](https://github.com/automation-robotics-machines/MultiPhysio-HRC)
 
 ---
 
@@ -81,13 +81,14 @@ Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, a
 If you use **MultiPhysio‑HRC** or this code, please cite the paper:
 
 ```bibtex
-@article{MultiPhysioHRC2025,
-  title   = {MultiPhysio-HRC: Multimodal Physiological Signals Dataset for industrial Human-Robot Collaboration},
-  author  = {Bussolan, Andrea and Baraldo, Stefano and Avram, Oliver and Urcola, Pablo and Montesano, Luis and Gambardella, Luca Maria and Valente, Anna},
-  year    = {2025},
-  journal = {TBD},
-  volume  = {TBD}, number = {TBD}, pages = {TBD},
-  doi     = {TBD},
+@misc{bussolan2025multiphysiohrcmultimodalphysiologicalsignals,
+      title={MultiPhysio-HRC: Multimodal Physiological Signals Dataset for industrial Human-Robot Collaboration}, 
+      author={Andrea Bussolan and Stefano Baraldo and Oliver Avram and Pablo Urcola and Luis Montesano and Luca Maria Gambardella and Anna Valente},
+      year={2025},
+      eprint={2510.00703},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.00703}, 
 }
 ```
 
