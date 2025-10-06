@@ -20,7 +20,7 @@
 
 ## Access
 
-**Dataset:** [https://zenodo.org/records/17225571]([https://zenodo.org/records/17225571])
+**Dataset:** [https://zenodo.org/records/17225571](https://zenodo.org/records/17225571)
 
 **Paper (PDF):** [https://arxiv.org/abs/2510.00703](https://arxiv.org/abs/2510.00703)
 
