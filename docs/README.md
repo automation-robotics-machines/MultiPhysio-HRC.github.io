@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2510.00703"><img alt="arXiv" src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv"></a>
   <a href="https://github.com/automation-robotics-machines/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
-  <a href=""><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
+  <a href="https://zenodo.org/records/18668043"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
   <a href="#citation"><img alt="Cite this" src="https://img.shields.io/badge/Cite-this-blue"></a>
 </p>
 
@@ -20,8 +20,7 @@
 
 ## Access
 
-<!-- **Dataset:** [https://zenodo.org/records/17225571](https://zenodo.org/records/17225571) -->
-**Dataset:** Coming soon...
+**Dataset:** [https://zenodo.org/records/18668043](https://zenodo.org/records/18668043)
 
 **Paper (PDF):** [https://arxiv.org/abs/2510.00703](https://arxiv.org/abs/2510.00703)
 
@@ -54,8 +53,10 @@ Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, a
 
 ## Dataset at a Glance
 **Participants**
-- Day 1: 55 subjects; 
+- Day 1: 52 subjects; 
 - Day 2: 42 subjects.
+
+_Some participants retired from the public release of the dataset, therefore there is a discrepancy with respect to the numbers mentioned in the paper._
 
 **Sessions & Tasks**
 - **Day 1 – Baseline and Stress Induction**
