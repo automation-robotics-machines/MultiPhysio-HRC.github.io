@@ -3,7 +3,9 @@
 > Official companion repository for the paper **“MultiPhysio‑HRC: Multimodal Physiological Signals Dataset for Industrial Human‑Robot Collaboration.”** This repo hosts code, docs, and assets to reproduce our preprocessing, feature extraction, and baseline models.
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2510.00703"><img alt="arXiv" src="https://img.shields.io/badge/Paper-arXiv-b31b1b?logo=arxiv"></a>
+  <a href="https://doi.org/10.3390/robotics14120184">
+  <img alt="DOI"
+       src="https://img.shields.io/badge/DOI-10.3390%2Frobotics14120184-blue"></a>
   <a href="https://github.com/automation-robotics-machines/MultiPhysio-HRC"><img alt="GitHub Repo" src="https://img.shields.io/badge/Code-GitHub-black"></a>
   <a href="https://zenodo.org/records/18668043"><img alt="Dataset" src="https://img.shields.io/badge/Dataset-Zenodo-brightgreen"></a>
   <a href="#citation"><img alt="Cite this" src="https://img.shields.io/badge/Cite-this-blue"></a>
@@ -22,7 +24,7 @@
 
 **Dataset:** [https://zenodo.org/records/18668043](https://zenodo.org/records/18668043)
 
-**Paper (PDF):** [https://arxiv.org/abs/2510.00703](https://arxiv.org/abs/2510.00703)
+**Paper (PDF):** [https://www.mdpi.com/2218-6581/14/12/184](https://www.mdpi.com/2218-6581/14/12/184)
 
 **GitHub (code, preprocessing, baselines):** [https://github.com/automation-robotics-machines/MultiPhysio-HRC](https://github.com/automation-robotics-machines/MultiPhysio-HRC)
 
@@ -33,6 +35,13 @@
 
 Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, and to build **human‑aware** adaptive robotic systems.
 
+<p align="center">
+  <img src="assets/images/cell.png" width="100%"></img>
+</p>
+<p align="center">
+  <em>Experiment setup.</em>
+</p>
+
 ---
 
 ## Highlights
@@ -42,11 +51,19 @@ Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, a
 - **Multimodal**: EEG (12‑ch dry), ECG, EDA, RESP, EMG at 256 Hz; voice; facial AUs (reduced fps for efficiency).
 - **Baselines**: Ready‑to‑run pipelines + models for regression/classification of stress and cognitive load.
 
----
 
-## Media
 <p align="center">
-  <em>Figures and demo videos will be added here.</em>
+  <video src="assets/videos/cobot-task.mp4" width="85%"></video>
+</p>
+<p align="center">
+  <em>Participant performing the cobot assisted task.</em>
+</p>
+
+<p align="center">
+  <video src="assets/videos/plank.mp4" width="85%"></video>
+</p>
+<p align="center">
+  <em>Participant perfoming the Richie’s Plank Experience.</em>
 </p>
 
 ---
@@ -70,14 +87,28 @@ _Some participants retired from the public release of the dataset, therefore the
     - Manual battery disassembly
     - Collaborative disassembly with a Fanuc CRX-20 cobot, using voice commands
 
+<p align="center">
+  <img src="assets/images/protocol.png" width="100%"></img>
+</p>
+<p align="center">
+  <em>Experiment protocol.</em>
+</p>
+
 **Modalities**
-- **Physio**: ECG, EDA, EMG, RESP @ 256 Hz (Bitbrain Versatile Bio); EEG: 12‑channel dry EEG (Bitbrain Diadem); **Voice** recordings; **Facial AUs** (down‑sampled for efficiency).
+- **Physio**: ECG, EDA, EMG, RESP @ 256 Hz (Bitbrain Versatile Bio); EEG: 12‑channel dry EEG (Bitbrain Diadem);
+- **Voice** recordings; 
+- **Facial AUs** (down‑sampled for efficiency).
+
+<p align="center">
+  <img src="assets/images/signals.png" width="100%"></img>
+</p>
+<p align="center">
+  <em>Collected signals.</em>
+</p>
 
 **Ground truth**
-- Per‑task: **STAI‑Y1**, **NASA‑TLX**, **SAM**; At start: **NARS**.
-
-**Ethics**
-- Conducted under institutional approval and with informed consent; see paper for details.
+- Per‑task: **STAI‑Y1**, **NASA‑TLX**, **SAM**; 
+- At start: **NARS**.
 
 ---
 
