@@ -36,7 +36,7 @@
 Use it to study **stress**, **cognitive load**, **valence/arousal/dominance**, and to build **human‑aware** adaptive robotic systems.
 
 <p align="center">
-  <img src="assets/images/cell.png" width="100%"></img>
+  <img src="assets/images/cell.png" width="100%">
 </p>
 <p align="center">
   <em>Experiment setup.</em>
@@ -88,7 +88,7 @@ _Some participants retired from the public release of the dataset, therefore the
     - Collaborative disassembly with a Fanuc CRX-20 cobot, using voice commands
 
 <p align="center">
-  <img src="assets/images/protocol.png" width="100%"></img>
+  <img src="assets/images/protocol.png" width="100%">
 </p>
 <p align="center">
   <em>Experiment protocol.</em>
@@ -100,7 +100,7 @@ _Some participants retired from the public release of the dataset, therefore the
 - **Facial AUs** (down‑sampled for efficiency).
 
 <p align="center">
-  <img src="assets/images/signals.png" width="100%"></img>
+  <img src="assets/images/signals.png" width="100%">
 </p>
 <p align="center">
   <em>Collected signals.</em>
